@@ -5,8 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAME CLEAR!!</title>
+
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgb(42, 42, 42);
+        }
+
+        header{
+            height: 70px;
+            width: 100%;
+            background-color: #14a3cb;
+            display: flex;
+            flex-direction: row;
+            color: #fff;
+
+        }
+        h1#headstr {
+            margin: 10px auto 0px auto;
+        }
+        div#pop {
+            margin: 15% 35% 0px 35%;
+            background-color: #fff;
+            color: #000;
+            padding: 2px 10px 0px 5px;
+            text-align: center;
+            display:block;
+            position:relative;
+            z-index:9998;
+            cursor: pointer;
+        }
+        li {
+            margin-top: 10%;
+        }
+        #main {
+            z-index:0;
+        }
+    </style>
 </head>
 <body>
+    <header><h1 id="headstr">ゲームクリア特典【癒し】</h1></header>
     
+    <div id="pop">
+        <p style="text-align: right;" id="close" onclick="Hidden('pop')">✕</p>
+        <h2 style="padding-top: 10px;">ゲームクリアおめでとう！</h2>
+        <p style="padding-bottom: 30px;">うちのペットの画像見て癒されてね(^Д^)</p>
+    </div>
+    
+    <div id="main" role="main">
+        <ul id="tiles">
+          <li><img src="images/1.jpg" width="200" /></li>
+          <li><img src="images/2.jpg" width="200" /></li>
+          <li><img src="images/3.jpg" width="200" /></li>
+          <li><img src="images/4.jpg" width="200" /></li>
+          <li><img src="images/5.jpg" width="200" /></li>
+          <li><img src="images/6.jpg" width="200" /></li>
+          <li><img src="images/7.jpg" width="200" /></li>
+          <li><img src="images/8.jpg" width="200" /></li>
+          <li><img src="images/9.jpg" width="200" /></li>
+          <li><img src="images/10.jpg" width="200" /></li>
+          <li><img src="images/11.jpg" width="200" /></li>
+          <li><img src="images/12.jpg" width="200" /></li>
+          <li><img src="images/13.jpg" width="200" /></li>
+          <li><img src="images/14.jpg" width="200" /></li>
+          <li><img src="images/15.jpg" width="200" /></li>
+          <li><img src="images/16.jpg" width="200" /></li>
+          <li><img src="images/17.jpg" width="200" /></li>
+          <li><img src="images/18.jpg" width="200" /></li>
+          <li><img src="images/19.jpg" width="200" /></li>
+          <li><img src="images/20.jpg" width="200" /></li>
+          <li><img src="images/21.jpg" width="200" /></li>
+          <li><img src="images/22.jpg" width="200" /></li>
+          <li><img src="images/23.jpg" width="200" /></li>
+          <li><img src="images/24.jpg" width="200" /></li>
+          <li><img src="images/25.jpg" width="200" /></li>
+          <li><img src="images/26.jpg" width="200" /></li>
+          <li><img src="images/27.jpg" width="200" /></li>
+          <li><img src="images/28.jpg" width="200" /></li>
+          <li><img src="images/29.jpg" width="200" /></li>
+          <li><img src="images/30.jpg" width="200" /></li>
+        </ul>
+    </div>
+
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="./js/wookmark.js"></script>
+    <script type="text/javascript">
+        
+        $('#tiles li').wookmark({
+        autoResize: true,
+        container: $('#main'),
+        offset: 5,
+        outerOffset: 10,
+        itemWidth: 210
+        });
+    </script>
+    <script>
+        function Hidden(id){
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
+
 </body>
 </html>
