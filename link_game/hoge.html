@@ -106,6 +106,14 @@
         });
     </script>
     <script>
+        // 待機処理用の関数
+        function wait(msec) {
+            return new Promise(resolve => setTimeout(resolve, msec));
+        }
+        async function relord(){
+            await wait(1500);
+            location.reload()
+        }
         function Hidden(id){
             document.getElementById(id).style.display = "none";
         }
