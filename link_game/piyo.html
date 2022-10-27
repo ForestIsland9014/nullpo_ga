@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hellow World!</title>
+    <style>
+        body {
+            background-color: #fff;
+            font-family: sans-serif;
+        }
+        main {
+            margin-left: 1%;
+        }
+        h1 {
+            margin-top: 2%;
+            font-size: 320%;
+        }
+        p#fake {
+            color: #0000ff;
+            text-decoration: underline;
+            display: inline;
+        }
+        a#real {
+            color: #0000ff;
+            text-decoration: none;
+            cursor: default;
+        }
+    </style>
+    <script>
+        function fake_link(){
+            window.location.href = 'stage1.html';
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <h1>404 Not Found</h1>
+        <p>This is a bogus error, so do not trust it!<br>By the way, I used DeepL because I cannot use English.<br><p id="fake" onclick="fake_link()">Do</p><a id="real" href="./huga.html">_</a><p id="fake" onclick="fake_link()">you need my help?</p>
+    </main>
+</body>
+</html>
