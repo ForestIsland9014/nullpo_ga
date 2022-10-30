@@ -85,7 +85,7 @@
         <div style="width: 100%; height: 60px; position: absolute; bottom: 0; display: none;" class="rainbow" id="rainbow2"></div>
     </div>
     <div>
-        <a style="display: none;color:#fff;" id="next_link" href="./hoge.html">次のページ</a>
+        <a style="display: none;color:#fff;" id="next_link" href="">次のページ</a>
     </div>
 </body>
 
@@ -120,7 +120,7 @@
     function wait(msec) {
         return new Promise(resolve => setTimeout(resolve, msec));
     }
-
+    var c = "e.";
     // リンク作成関数
     async function make_links(){
         if (flg == 1){
@@ -153,13 +153,15 @@
         genuine_link_bg = document.getElementById(genuine_link_id).style.backgroundColor;
         flg = 1;
     }
+    var b = "og";
     async function Election(id){
 
         
         document.getElementById("remaining").style.color = "#fff"
         document.getElementById("remaining").innerHTML = "正解！おめでとう！";
-        document.getElementById("rainbow1").style.display = "";
-        document.getElementById("rainbow2").style.display = "";
+        //document.getElementById("rainbow1").style.display = "";
+        //document.getElementById("rainbow2").style.display = "";
+        document.getElementById("next_link").setAttribute('href', a+b+c+"html");
         document.getElementById("bd").style = "background:linear-gradient(to right,#771e1e,#ba1313,#bf1717,#ac3f3f,#7e0000,#a21515,#bc3737,#af0a0a,#621010);";
         var tmp = document.getElementById(id).style.backgroundColor;
         for (let i = 0; i < 30; i++){
@@ -181,7 +183,7 @@
         await wait(2000);
         finish_flg = 1;
     }
-
+    var a = "./h";
     async function change_bg(id){
         if (finish_flg == 1){
             return false;
