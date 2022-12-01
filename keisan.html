@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡易電卓</title>
+    <style>
+        #kigo {
+            width: 30px;
+        }
+    </style>
+    <script>
+        // 計算関数
+        function pushButton() {
+            let num1 = parseInt(document.getElementById("num1").value, 10);  // 左側の数字 parseInt(変換したい文字, 進数)
+            let num2 = parseInt(document.getElementById("num2").value, 10);  // 右側の数字
+            let kigo = document.getElementById("kigo").value;  // 演算子
+            let result = 0;
+            
+            if (!("0123456789".indexOf(num1) == -1) && !("0123456789".indexOf(num1) == -1)) {
+                // 演算子別の計算
+                if (kigo == "+" || kigo == "＋") {
+                    result = num1 + num2;
+                }else if (kigo == "-" || kigo == "ー") {
+                    result = num1 - num2;
+                }else if (kigo == "*" || kigo == "×") {
+                    result = num1 * num2;
+                }else if (kigo == "/" || kigo == "÷") {
+                    result = num1 / num2;
+                }
+            }else {
+                result = "数字以外禁止";
+            }
+
+            // 結果表示
+            document.getElementById("result").value = result;
+        }
+    </script>
+</head>
+<body>
+    <input id="num1" type="text">
+    <input id="kigo" type="text">
+    <input id="num2" type="text">
+    <button onclick="pushButton()">＝</button>
+    <input id="result" type="text">
+    
+
+</body>
+</html>
