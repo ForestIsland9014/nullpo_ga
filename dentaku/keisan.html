@@ -17,17 +17,20 @@
             let num2 = parseInt(document.getElementById("num2").value, 10);  // 右側の数字
             let kigo = document.getElementById("kigo").value;  // 演算子
             let result = 0;
-
-            // 演算子別の計算
-            if (kigo == "+" || kigo == "＋") {
-                result = num1 + num2;
-            }else if (kigo == "-" || kigo == "ー") {
-                result = num1 - num2;
-            }else if (kigo == "*" || kigo == "×") {
-                result = num1 * num2;
-            }else if (kigo == "/" || kigo == "÷") {
-                result = num1 / num2;
+            
+            if (!isNaN(num1) && !isNan(num2)) {
+                // 演算子別の計算
+                if (kigo == "+" || kigo == "＋") {
+                    result = num1 + num2;
+                }else if (kigo == "-" || kigo == "ー") {
+                    result = num1 - num2;
+                }else if (kigo == "*" || kigo == "×") {
+                    result = num1 * num2;
+                }else if (kigo == "/" || kigo == "÷") {
+                    result = num1 / num2;
+                }
             }
+
             // 結果表示
             document.getElementById("result").value = result;
         }
