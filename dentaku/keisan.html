@@ -18,7 +18,7 @@
             let kigo = document.getElementById("kigo").value;  // 演算子
             let result = 0;
             
-            if (!isNaN(num1) && !isNan(num2)) {
+            if (!("0123456789".indexOf(num1) == -1) && !("0123456789".indexOf(num1) == -1)) {
                 // 演算子別の計算
                 if (kigo == "+" || kigo == "＋") {
                     result = num1 + num2;
@@ -29,6 +29,8 @@
                 }else if (kigo == "/" || kigo == "÷") {
                     result = num1 / num2;
                 }
+            }else {
+                result = "数字以外禁止";
             }
 
             // 結果表示
@@ -43,5 +45,6 @@
     <button onclick="pushButton()">＝</button>
     <input id="result" type="text">
     
+    <img src="./test.jpg" alt="">
 </body>
 </html>
